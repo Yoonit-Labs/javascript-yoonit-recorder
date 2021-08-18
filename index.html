@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Recorder Sandbox </title>
+    <style>
+        pre { background-color: #F1F1F1; padding: 10px; }
+        .button-wrapper { display: flex; flex-direction: row; }
+        .button-wrapper button:not(:first-child) { margin-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Yoonit Recorder Sandbox</h1>
+
+    <p>Record Audio:</p>
+    <div class="button-wrapper">
+        <button id="rec"> Record </button>
+        <button id="pause"> Pause </button>
+        <button id="stop"> Stop </button>
+    </div>
+    <br>
+    <div class="status-wrapper" style="display:none">
+        <span> Recording... </span>
+    </div>
+    <br>
+
+    <hr>
+
+    <p>Audio:</p>
+    <audio id="result" controls>
+        <source src="data:audio/wav;base64,UklGRkb0AgBXQVZFZm10IBAAAAABAAIARKwAABCxAgAEABAATElTVBoAAABJTkZPSVNGVA4AAABMYXZmNTguNDUuMTAwAGRhdGEA9AIAA">
+    </audio>
+
+    <!-- js -->
+    <script src="/bundle.js"></script>
+    <script>
+        // code sandbox
+    </script>
+</body>
+</html>
