@@ -1,94 +1,87 @@
-# perse-sdk-js
+# yoo-recorder
 
 ## How to run the project
 ``
-npm install
+npm install @cyberlabsai/yoo-recorder
 npm run serve
 ``
 
-## How to build and use it on another project
+## How to build locally and use it on another project
 After installing the project:
 
-1- At the root of Perse sdk directory, run: `npm link`
+1- At the root of Yoo Recorder directory, run: `npm link`
 
-2- In the project that you want to use Perse sdk, run: `npm link @cyberlabsai/perse-sdk-js`
+2- In the project that you want to use Yoo Recorder, run: `npm link @cyberlabsai/yoo-recorder`
 
-3- Then, run `npm run watch` on Perse directory
+3- Then, run `npm run watch` on Yoo Recorder directory
 
-## Authenticate
+## How to use it
 
-Signature: `Perse.face.authenticate(personFirstImage, personSecondImage)`
+```
+import YooRecorder from '@cyberlabs/yoo-recorder'
 
-| Parameter             | Description     | Type |
-| --------------        |:---------------:| ----:|
-| personFirstImage      | An image file   | File or Blob |
-| personSecondImage     | An image file   | File or Blob |
+const recorder = YooRecorder()
+```
 
-Returns:
+It's important to allow microphone, to audio capture be possible.
+
+### Methods
+
+## start
+
+- It starts recording audio.
+
+```
+recorder.start()
+
+```
+
 <br>
 
-| Property      | Description                         | Type    |
-| ------------- |:-----------------------------------:| -------:|
-| status        | Represents if authenticated succeed | boolean |
-| code          | Success or failure code             | string  |
-| message       | Feedback message                    | string  |
+## pause
 
+- Pauses current audio record.
 
-## Compare
+```
+recorder.pause()
 
-Signature: `Perse.face.compare(personFirstImage, personSecondImage)`
+```
 
-| Parameter             | Description     | Type |
-| --------------        |:---------------:| ----:|
-| personFirstImage      | An image file   | File or Blob |
-| personSecondImage     | An image file   | File or Blob |
+## stop
 
-Returns:
+- It stops recording and clear it.
+
+```
+recorder.stop()
+
+```
+
+## clear
+
+- It clears recorded data.
+
+```
+recorder.clear()
+
+```
+
+## getMedia
+
+- Returns captured media.
+```
+const media = recorder.getMedia()
+
+sendAudio(media.audioBlob)
+
+```
 <br>
-
-| Property      | Description                                                    | Type             |
-| ------------- |:--------------------------------------------------------------:| ----------------:|
-| status        | Represents if request succeed                                  | boolean          |
-| similarity    | A number that represents the similarity gradation              | number (0-100)   |
-| code          | Success or failure code                                        | string           |
-| image_tokens  | An Array with array unique identifier generated from Perse API | `Array<string>`  |
-| time_taken    | Time taken to fulfill request                                  | number           |
-| message       | Feedback message                                               | string           |
-
-## Detect
-
-Signature: `Perse.face.detect(personImage)`
-
-| Parameter             | Description     | Type |
-| --------------        |:---------------:| ----:|
-| personImage           | An image file   | File or Blob |
-
 Returns:
-<br>
-| Property      | Description                                   | Type    |
-| ------------- |:--------------------------------------------: | -------:|
-| status        | Represents if authenticated succeed           | boolean |
-| code          | Success or failure code                       | string  |
-| message       | Feedback message                              | string  |
-| faces         | Faces detected by Parse. see more             | array   |
-| image_metrics | An object with image quality data. see more   | object  |
-| image_token   | A unique image identifier                     | string  |
-| time_taken    | Time taken to fulfill request                 | number  |
-| total_faces   | Total faces that are on image                 | number  |
 
-## Validate
+| Property      | Description                                    | Type    |
+| ------------- |:----------------------------------------------:| -------:|
+| audio         | Audio file type                                | wmv     |
+| audioBlob     | Audio blob                                     | binary  |
+| audioUrl      | Audio URL                                      | string  |
+| file          | Audio file object                              | File    |
+| play          | Function to play recorded audio                | Function|
 
-Signature: `Perse.face.validate(personImage)`
-
-| Parameter             | Description     | Type |
-| --------------        |:---------------:| ----:|
-| personImage           | An image file   | File or Blob |
-
-Returns:
-<br>
-
-| Property      | Description                                   | Type    |
-| ------------- |:--------------------------------------------: | -------:|
-| status        | Represents if authenticated succeed           | boolean |
-| code          | Success or failure code                       | string  |
-| message       | Feedback message                              | array   |
