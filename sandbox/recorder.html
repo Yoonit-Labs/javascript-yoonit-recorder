@@ -13,14 +13,30 @@
 </head>
 <body>
 
-<h1>Sandbox</h1>
+<h1>Yoonit Recorder Sandbox</h1>
 
-<div>
-    <li><a href="./sandbox/recorder.html">Recorder</a></li>
+<p>Record Audio:</p>
+<div class="button-wrapper">
+    <button id="rec"> Record </button>
+    <button id="pause"> Pause </button>
+    <button id="stop"> Stop </button>
 </div>
+<br>
+<div id="feedback" class="status-wrapper" style="display:none">
+    <span> Recording... </span>
+</div>
+<br>
+
+<hr>
+
+<p>Audio:</p>
+<audio id="result" controls>
+    <source src="data:audio/wav;base64,UklGRkb0AgBXQVZFZm10IBAAAAABAAIARKwAABCxAgAEABAATElTVBoAAABJTkZPSVNGVA4AAABMYXZmNTguNDUuMTAwAGRhdGEA9AIAA">
+</audio>
 
 <!-- js -->
 <script src="/bundle.js"></script>
+<script src="recorder.js"></script>
 <script>
   // code sandbox
 </script>
