@@ -1,5 +1,5 @@
-import Recorder from './recorder';
+import YooRecorder from './recorder';
 
-export default { Recorder }
+export default YooRecorder
 
-export { Recorder }
+export { YooRecorder }

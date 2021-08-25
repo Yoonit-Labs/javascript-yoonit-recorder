@@ -2,7 +2,7 @@
 
 ## How to run the project
 ``
-npm install @cyberlabsai/yoo-recorder
+npm install @cyberlabsai/yoonit-recorder
 npm run serve
 ``
 
@@ -11,7 +11,7 @@ After installing the project:
 
 1- At the root of Yoo Recorder directory, run: `npm link`
 
-2- In the project that you want to use Yoo Recorder, run: `npm link @cyberlabsai/yoo-recorder`
+2- In the project that you want to use Yoo Recorder, run: `npm link @cyberlabsai/yoonit-recorder`
 
 3- Then, run `npm run watch` on Yoo Recorder directory
 
@@ -20,7 +20,7 @@ After installing the project:
 ```
 import YooRecorder from '@cyberlabs/yoo-recorder'
 
-const recorder = YooRecorder()
+const recorder = await YooRecorder()
 ```
 
 It's important to allow microphone, to audio capture be possible.

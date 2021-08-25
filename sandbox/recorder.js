@@ -1,7 +1,7 @@
 $recorder = null
 
 window.onload = async function () {
-  $recorder = await Recorder()
+  $recorder = await YooRecorder()
 }
 
 document.getElementById('rec').addEventListener('click', async () => {

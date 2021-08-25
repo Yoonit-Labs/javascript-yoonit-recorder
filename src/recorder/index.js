@@ -1,6 +1,6 @@
 import { recordingStatus } from './status'
 
-const Recorder = async () => {
+const YooRecorder = async () => {
   let audioChunks = [];
   const stream = await navigator.mediaDevices.getUserMedia({audio: true, video: false});
   const mediaRecorder = new MediaRecorder(stream);
@@ -50,4 +50,4 @@ const Recorder = async () => {
   return({ mediaRecorder, start, pause, stop, clear, getMedia });
 }
 
-export default Recorder
+export default YooRecorder
