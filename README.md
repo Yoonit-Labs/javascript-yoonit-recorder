@@ -69,7 +69,7 @@ recorder.clear()
 
 - Returns captured media.
 ```
-const media = recorder.getMedia()
+const media = await recorder.getMedia()
 
 sendAudio(media.audioBlob)
 
