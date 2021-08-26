@@ -1,4 +1,4 @@
-# yoo-recorder
+# yoonit-recorder
 
 ## How to run the project
 ``
