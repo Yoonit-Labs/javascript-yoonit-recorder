@@ -2,23 +2,13 @@
 
 ## How to run the project
 ``
-npm install @cyberlabsai/yoonit-recorder
-npm run serve
+npm install @yoonit/recorder
 ``
-
-## How to build locally and use it on another project
-After installing the project:
-
-1- At the root of Yoo Recorder directory, run: `npm link`
-
-2- In the project that you want to use Yoo Recorder, run: `npm link @cyberlabsai/yoonit-recorder`
-
-3- Then, run `npm run watch` on Yoo Recorder directory
 
 ## How to use it
 
 ```
-import YooRecorder from '@cyberlabs/yoo-recorder'
+import YooRecorder from '@yoonit/recorder'
 
 const recorder = await YooRecorder()
 ```
