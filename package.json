@@ -1,5 +1,5 @@
 {
-  "name": "@yoonit/recorder",
+  "name": "@yoonit/javascript-recorder",
   "version": "0.1.0",
   "description": "A JavaScript Recording Library, powered by Cyberlabs.",
   "main": "dist/bundle.js",

@@ -2,13 +2,13 @@
 
 ## How to run the project
 ``
-npm install @yoonit/recorder
+npm install @yoonit/javascript-recorder
 ``
 
 ## How to use it
 
 ```
-import YooRecorder from '@yoonit/recorder'
+import YooRecorder from '@yoonit/javascript-recorder'
 
 const recorder = await YooRecorder()
 ```
